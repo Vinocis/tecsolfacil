@@ -25,6 +25,10 @@ config :tecsolfacil, TecsolfacilWeb.Endpoint,
   secret_key_base: "TRIlFhQ8XqmSYEJD4kjiVitHNYeSlnCwV9a2F1pQnMnlSk0E6CGQ7gpiDgo0zZPB",
   watchers: []
 
+config :tecsolfacil,
+  repo: Tecsolfacil.Repo,
+  switch_env: TecsolfacilServices.ViacepClient.Impl
+
 # ## SSL Support
 #
 # In order to use HTTPS in development, a self-signed

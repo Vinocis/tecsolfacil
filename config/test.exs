@@ -13,6 +13,9 @@ config :tecsolfacil, Tecsolfacil.Repo,
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
+config :tecsolfacil,
+  switch_env: ViacepClientMock
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :tecsolfacil, TecsolfacilWeb.Endpoint,
