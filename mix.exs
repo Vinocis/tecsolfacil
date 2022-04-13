@@ -43,7 +43,8 @@ defmodule Tecsolfacil.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:finch, "~> 0.11"},
-      {:mox, "~> 1.0", only: :test}
+      {:mox, "~> 1.0", only: :test},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 
