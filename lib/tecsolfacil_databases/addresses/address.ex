@@ -30,7 +30,9 @@ defmodule TecsolfacilDatabases.Addresses.Address do
     |> validate_required(:cep)
     |> remove_mask_from_cep()
     |> validate_length(:cep, is: 8, message: "The zip code should have 8 digits")
-    |> unsafe_validate_unique(:cep, Tecsolfacil.Repo, message: "This zip code has already been taken")
+    |> unsafe_validate_unique(:cep, Tecsolfacil.Repo,
+      message: "This zip code has already been taken"
+    )
   end
 
   defp remove_mask_from_cep(changeset) do
