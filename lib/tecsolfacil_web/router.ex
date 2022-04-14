@@ -11,5 +11,9 @@ defmodule TecsolfacilWeb.Router do
     scope "/v1", V1, as: :v1 do
       get "/address/:cep", AddressController, :show
     end
+
+    scope "/v1", V1, as: :v1 do
+      get "/addresses/csv", CsvGenController, :show
+    end
   end
 end
