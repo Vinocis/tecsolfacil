@@ -11,12 +11,13 @@ First of all, make sure to have the 1.12 elixir version installed.
 
 Now that you have the Elixir on your machine, lets get it started!
 
-  * Install dependencies with `mix deps.get`
+  * Make a clone of this repository in your local machine with `git clone`
+  * Inside the cloned repo install dependencies with `mix deps.get`
   * Create and migrate the database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+  * And finally start the Phoenix server with `mix phx.server`
 
-After this 3 simple commands, you have 2 options:
-  * [`localhost:4000/address/:zip_code`](http://localhost:4000/address/:zip_code)
+After these commands, you have 2 options:
+  * [`localhost:4000/address/insert_zipcode_here`](http://localhost:4000/address/:zip_code)
   Here you can search and get how many zip code informations that you want
   * [`localhost:4000/addresses/csv`](http://localhost:4000/addresses/csv)
   By accessing this endpoint our application will generate the .csv file
