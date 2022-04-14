@@ -2,6 +2,11 @@ defmodule TecsolfacilDatabases.Addresses do
   alias TecsolfacilDatabases.Addresses.Address
   alias Tecsolfacil.Repo
   alias TecsolfacilServices.ViacepClient.SwitchEnv
+  import Ecto.Query
+
+  def list_addresses do
+    Repo.all(from u in Address, select: u)
+  end
 
   def create_address!(address) do
     %Address{}
