@@ -8,7 +8,7 @@ defmodule Tecsolfacil.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      {Finch, name: CepFinch},
+      {Finch, name: ZipCodeFinch},
       # Start the Ecto repository
       Tecsolfacil.Repo,
       # Start the Telemetry supervisor

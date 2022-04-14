@@ -1,4 +1,7 @@
 defmodule TecsolfacilServices.ViacepClient.Impl do
+  @moduledoc """
+  Gets the zip code info from the ViaCep web service
+  """
   alias TecsolfacilServices.ViacepClient.Behaviour
 
   @behaviour Behaviour
@@ -7,7 +10,7 @@ defmodule TecsolfacilServices.ViacepClient.Impl do
   def zip_code_info(zip_code) do
     :get
     |> Finch.build("https://viacep.com.br/ws/#{zip_code}/json/")
-    |> Finch.request(CepFinch)
+    |> Finch.request(ZipCodeFinch)
     |> handle_response()
   end
 
