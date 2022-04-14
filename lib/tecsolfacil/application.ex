@@ -16,15 +16,20 @@ defmodule Tecsolfacil.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Tecsolfacil.PubSub},
       # Start the Endpoint (http/https)
-      TecsolfacilWeb.Endpoint
+      TecsolfacilWeb.Endpoint,
       # Start a worker by calling: Tecsolfacil.Worker.start_link(arg)
       # {Tecsolfacil.Worker, arg}
+      {Oban, oban_config()}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Tecsolfacil.Supervisor]
     Supervisor.start_link(children, opts)
+  end
+
+  defp oban_config do
+    Application.fetch_env!(:tecsolfacil, Oban)
   end
 
   # Tell Phoenix to update the endpoint configuration

@@ -23,6 +23,8 @@ config :tecsolfacil, TecsolfacilWeb.Endpoint,
   secret_key_base: "35UKJswBKSiQjGsAYt13quLz0vkbizkuUR/+FhCt3Oll1M09P8UYEgGbMIRIVFMS",
   server: false
 
+config :tecsolfacil, Oban, queues: false, plugins: false
+
 # Print only warnings and errors during test
 config :logger, level: :warn
 
