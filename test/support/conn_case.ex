@@ -33,7 +33,7 @@ defmodule TecsolfacilWeb.ConnCase do
   end
 
   setup tags do
-    pid = SQL.Sandbox.start_owner!(Tecsolfacil.Repo, shared: not tags[:async])
+    pid = Sandbox.start_owner!(Tecsolfacil.Repo, shared: not tags[:async])
     on_exit(fn -> Sandbox.stop_owner(pid) end)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
