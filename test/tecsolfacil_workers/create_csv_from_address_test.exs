@@ -9,6 +9,7 @@ defmodule TecsolfacilWorkers.CreateCsvFromAddressTest do
                perform_job(CreateCsvFromAddress, %{
                  file_name: "file_name"
                })
+
       File.rm("lib/tecsolfacil/csv/generated_csvs/file_name.csv")
     end
   end

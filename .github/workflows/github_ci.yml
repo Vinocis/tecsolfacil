@@ -40,13 +40,13 @@ jobs:
     - name: Check unused deps in lockfile
       run: mix deps.unlock --check-unused
     - name: Check compile warnings
-      run: mix compile
+      run: mix compile --warnings-as-errors
     - name: Check code formating
       run: mix format --check-formatted
     - name: Check code smells
       run: mix credo --strict
     - name: Check tests
-      run: mix test
+      run: mix test --warnings-as-errors
     - name: Check seeds consistency
       run: |
         mix ecto.create

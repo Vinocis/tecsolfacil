@@ -22,6 +22,7 @@ defmodule TecsolfacilWorkers.CreateCsvFromAddress do
       prepend_header()
       |> CSV.encode()
       |> Enum.to_list()
+
     File.write("lib/tecsolfacil/csv/generated_csvs/#{file_name}.csv", csv_file)
 
     {:ok, csv_file}
