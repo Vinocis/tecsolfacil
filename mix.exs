@@ -41,7 +41,12 @@ defmodule Tecsolfacil.MixProject do
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.5"}
+      {:plug_cowboy, "~> 2.5"},
+      {:finch, "~> 0.11"},
+      {:mox, "~> 1.0", only: :test},
+      {:oban, "~> 2.11"},
+      {:csv, "~> 2.4"},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 

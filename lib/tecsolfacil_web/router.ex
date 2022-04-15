@@ -5,7 +5,15 @@ defmodule TecsolfacilWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", TecsolfacilWeb do
+  scope "/api", TecsolfacilWeb.Api, as: :api do
     pipe_through :api
+
+    scope "/v1", V1, as: :v1 do
+      get "/address/:cep", AddressController, :show
+    end
+
+    scope "/v1", V1, as: :v1 do
+      get "/addresses/csv", CsvGenController, :show
+    end
   end
 end
