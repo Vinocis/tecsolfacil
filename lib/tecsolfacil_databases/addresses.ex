@@ -4,8 +4,8 @@ defmodule TecsolfacilDatabases.Addresses do
   data.
   """
 
-  alias TecsolfacilDatabases.Addresses.Address
   alias Tecsolfacil.Repo
+  alias TecsolfacilDatabases.Addresses.Address
   alias TecsolfacilServices.ViacepClient.SwitchEnv
   import Ecto.Query
 
