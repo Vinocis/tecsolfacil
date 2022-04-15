@@ -1,7 +1,6 @@
 defmodule TecsolfacilWeb.Api.V1.AddressViewTest do
   use TecsolfacilWeb.ConnCase
   alias TecsolfacilWeb.Api.V1.AddressView
-  import Phoenix.View
 
   describe "render/2" do
     test "if an address is given, renders a json with their information" do

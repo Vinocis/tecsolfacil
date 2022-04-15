@@ -44,6 +44,8 @@ defmodule Tecsolfacil.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:finch, "~> 0.11"},
       {:mox, "~> 1.0", only: :test},
+      {:oban, "~> 2.11"},
+      {:csv, "~> 2.4"},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
