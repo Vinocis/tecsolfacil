@@ -21,7 +21,8 @@ defmodule TecsolfacilWorkers.CreateCsvFromAddress do
     csv_file =
       prepend_header()
       |> CSV.encode()
-      |> Enum.into(File.stream!("lib/tecsolfacil/csv/generated_csvs/#{file_name}.csv"))
+      |> Enum.to_list()
+    File.write("lib/tecsolfacil/csv/generated_csvs/#{file_name}.csv", csv_file)
 
     {:ok, csv_file}
   end
