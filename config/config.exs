@@ -17,6 +17,11 @@ config :tecsolfacil, TecsolfacilWeb.Endpoint,
   pubsub_server: Tecsolfacil.PubSub,
   live_view: [signing_salt: "yr1nYzmM"]
 
+config :tecsolfacil, Oban,
+  repo: Tecsolfacil.Repo,
+  plugins: [Oban.Plugins.Pruner],
+  queues: [create_csv: 10]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
