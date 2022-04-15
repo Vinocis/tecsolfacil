@@ -1,12 +1,12 @@
 # defmodule TecsolfacilWorkers.CreateCsvFromAddressTest do
 
-@doc """
-For some reason, the test just works remotely and I don't
-figure out how to solve this problem. If you know how to
-solve it and are willing to help, I'll really appreciate that.
 
-You can remove the # and try by yourself remotely
-"""
+# For some reason, the test just works remotely and I don't
+# figure out how to solve this problem. If you know how to
+# solve it and are willing to help, I'll really appreciate that.
+
+# You can remove the # and try by yourself remotely
+
 
 #   use Tecsolfacil.DataCase
 #   use Oban.Testing, repo: Tecsolfacil.Repo
